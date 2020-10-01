@@ -21,10 +21,6 @@ module.exports = (sequelize, DataTypes) => {
         price: {
             type: DataTypes.NUMBER,
             allowNull: false
-        },
-        color: {
-            type: DataTypes.STRING,
-            allowNull: false
         }
     }, {
         tableName: 'stolen-bikes',

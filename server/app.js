@@ -1,10 +1,14 @@
 const express = require('express');
 const server = express();
+const {apiRouter} = require('./routes');
 
 server.use(express.urlencoded({extended: false}));
 server.use(express.json());
 
-server.use('api', apiRouter);
+const database = require('./database').getInstance();
+database.setModels();
+
+server.use('/api', apiRouter);
 
 server.use('*', (err, req, res, next) => {
     res.status(err.status || 404).json({
