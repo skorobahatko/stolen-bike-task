@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
     const Policeman = sequelize.define ('Policeman', {
         id: {
-            type: DataTypes.NUMBER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
@@ -17,6 +17,10 @@ module.exports = (sequelize, DataTypes) => {
         skill: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        status: {
+            type: DataTypes.BOOLEAN,
+            default: false
         }
     }, {
         tableName: 'police',

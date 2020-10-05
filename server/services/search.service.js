@@ -1,8 +1,9 @@
 const database = require ('../database').getInstance ();
 
 module.exports = {
-    servicePostStolenBike: (json) => {
-        const Bike = database.getModel('Bike');
-        return Bike.create(json, {new: true});
+    servicePostStolenBike: (newObj) => {
+        const Bike = database.getModel ('StolenBike');
+        console.log (Bike);
+        return Bike.create (newObj, { new: true });
     }
 };

@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
     const Bike = sequelize.define ('Bike', {
         id: {
-            type: DataTypes.NUMBER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
@@ -15,11 +15,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         timeOfSteal: {
-            type: DataTypes.NUMBER,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         price: {
-            type: DataTypes.NUMBER,
+            type: DataTypes.INTEGER,
             allowNull: false
         }
     }, {
